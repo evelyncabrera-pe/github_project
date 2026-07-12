@@ -1,0 +1,1025 @@
+<title>Python para Análisis de Datos — Referencia Senior</title>
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  :root {
+    --bg: #f6f2e9;
+    --surface: #ffffff;
+    --surface-2: #efe9da;
+    --text: #1c1f27;
+    --text-dim: #5b6272;
+    --text-faint: #8a8f9d;
+    --border: #e2dac2;
+    --accent: #a8710f;
+    --accent-ink: #ffffff;
+    --accent-soft: #f1e2c3;
+    --teal: #2f7d74;
+    --teal-soft: #dbeeeb;
+    --code-bg: #21262f;
+    --code-text: #e7e4da;
+    --code-border: #333a48;
+    --shadow: 0 1px 2px rgba(28,31,39,0.06), 0 8px 24px rgba(28,31,39,0.06);
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --font-body: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10141c;
+      --surface: #171d29;
+      --surface-2: #1d2431;
+      --text: #e9e6dd;
+      --text-dim: #a4abbc;
+      --text-faint: #6c7385;
+      --border: #262e3d;
+      --accent: #d9a441;
+      --accent-ink: #171207;
+      --accent-soft: #33291a;
+      --teal: #6bc4ba;
+      --teal-soft: #17302d;
+      --code-bg: #0d1017;
+      --code-text: #e7e4da;
+      --code-border: #262e3d;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10141c; --surface: #171d29; --surface-2: #1d2431; --text: #e9e6dd;
+    --text-dim: #a4abbc; --text-faint: #6c7385; --border: #262e3d; --accent: #d9a441;
+    --accent-ink: #171207; --accent-soft: #33291a; --teal: #6bc4ba; --teal-soft: #17302d;
+    --code-bg: #0d1017; --code-text: #e7e4da; --code-border: #262e3d;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #f6f2e9; --surface: #ffffff; --surface-2: #efe9da; --text: #1c1f27;
+    --text-dim: #5b6272; --text-faint: #8a8f9d; --border: #e2dac2; --accent: #a8710f;
+    --accent-ink: #ffffff; --accent-soft: #f1e2c3; --teal: #2f7d74; --teal-soft: #dbeeeb;
+    --code-bg: #21262f; --code-text: #e7e4da; --code-border: #333a48;
+    --shadow: 0 1px 2px rgba(28,31,39,0.06), 0 8px 24px rgba(28,31,39,0.06);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--font-body); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); }
+
+  a { color: var(--teal); }
+
+  .shell {
+    display: grid;
+    grid-template-columns: 296px minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    border-right: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky; top: 0; height: 100vh;
+    display: flex; flex-direction: column;
+    padding: 22px 18px;
+    overflow-y: auto;
+  }
+  .brand {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  .brand-mark {
+    font-family: var(--font-display); font-size: 1.28rem; font-weight: 600;
+    letter-spacing: 0.01em; text-wrap: balance;
+  }
+  .brand-mark .accent-dot { color: var(--accent); }
+  .theme-toggle {
+    border: 1px solid var(--border); background: var(--surface-2); color: var(--text-dim);
+    border-radius: 5px; width: 30px; height: 30px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .theme-toggle:focus-visible, button:focus-visible, input:focus-visible, .nav-link:focus-visible {
+    outline: 2px solid var(--teal); outline-offset: 2px;
+  }
+  .subtitle {
+    font-size: 0.78rem; color: var(--text-faint); margin: 2px 0 18px;
+    letter-spacing: 0.02em;
+  }
+
+  .search-wrap { position: relative; margin-bottom: 18px; }
+  .search-wrap input {
+    width: 100%; padding: 8px 10px 8px 30px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 0.85rem;
+  }
+  .search-wrap input::placeholder { color: var(--text-faint); }
+  .search-icon {
+    position: absolute; left: 9px; top: 50%; transform: translateY(-50%);
+    font-size: 0.8rem; color: var(--text-faint); pointer-events: none;
+  }
+  .search-count { font-size: 0.72rem; color: var(--text-faint); margin: 6px 2px 0; min-height: 14px; }
+
+  .nav-group-label {
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--text-faint); margin: 14px 4px 8px;
+  }
+  .nav-list { list-style: none; margin: 0; padding: 0; }
+  .nav-item { margin-bottom: 2px; }
+  .nav-link {
+    display: flex; gap: 10px; align-items: baseline; padding: 7px 8px;
+    border-radius: 6px; text-decoration: none; color: var(--text-dim);
+    font-size: 0.86rem; cursor: pointer; border: 1px solid transparent;
+  }
+  .nav-link:hover { background: var(--surface-2); color: var(--text); }
+  .nav-link.active {
+    background: var(--accent-soft); color: var(--text); border-color: var(--border);
+    font-weight: 600;
+  }
+  .nav-num {
+    font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint);
+    min-width: 1.4em;
+  }
+  .nav-link.active .nav-num { color: var(--accent); }
+
+  .sidebar-foot {
+    margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border);
+    font-size: 0.72rem; color: var(--text-faint); line-height: 1.55;
+  }
+  .sidebar-foot code {
+    background: var(--surface-2); padding: 1px 5px; border-radius: 4px;
+    font-family: var(--font-mono); font-size: 0.7rem;
+  }
+
+  /* ---------- Main ---------- */
+  main { min-width: 0; padding: 48px clamp(20px, 5vw, 72px) 96px; }
+  .hero { max-width: 760px; margin-bottom: 56px; }
+  .eyebrow {
+    font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--teal); font-weight: 700; margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 2.9rem);
+    line-height: 1.12; margin: 0 0 16px; text-wrap: balance; font-weight: 600;
+  }
+  .hero p { color: var(--text-dim); font-size: 1.04rem; max-width: 62ch; }
+  .hero-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  .pill {
+    font-size: 0.76rem; padding: 5px 11px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--text-dim); background: var(--surface);
+  }
+
+  .module {
+    max-width: 780px; margin: 0 0 88px; scroll-margin-top: 24px;
+    padding-top: 8px;
+  }
+  .module + .module { border-top: 1px solid var(--border); padding-top: 64px; }
+  .module-kicker {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+  }
+  .module-num {
+    font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent);
+    border: 1px solid var(--border); background: var(--surface); border-radius: 6px;
+    padding: 3px 9px;
+  }
+  .module-dataset { font-size: 0.78rem; color: var(--text-faint); font-family: var(--font-mono); }
+  .module h2 {
+    font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+    margin: 0 0 12px; text-wrap: balance; font-weight: 600;
+  }
+  .module-summary { color: var(--text-dim); max-width: 66ch; margin-bottom: 8px; }
+  .module-notebook {
+    display: inline-flex; align-items: center; gap: 7px; margin-top: 14px;
+    font-size: 0.82rem; color: var(--text-dim); background: var(--teal-soft);
+    border: 1px solid var(--border); padding: 6px 12px; border-radius: 7px;
+  }
+  .module-notebook code {
+    font-family: var(--font-mono); color: var(--teal); background: none; font-size: 0.8rem;
+  }
+
+  section.topic { margin-top: 40px; }
+  section.topic h3 {
+    font-family: var(--font-display); font-size: 1.22rem; margin: 0 0 10px;
+    font-weight: 600; text-wrap: balance;
+  }
+  section.topic .topic-num {
+    color: var(--text-faint); font-family: var(--font-mono); font-size: 0.85rem; margin-right: 8px;
+  }
+  section.topic p { color: var(--text-dim); max-width: 68ch; margin: 0 0 14px; }
+  section.topic p strong { color: var(--text); font-weight: 600; }
+  section.topic ul, section.topic ol { color: var(--text-dim); max-width: 68ch; padding-left: 1.3em; }
+  section.topic li { margin-bottom: 6px; }
+  section.topic li strong { color: var(--text); }
+  section.topic code.inline {
+    font-family: var(--font-mono); background: var(--surface-2); color: var(--accent);
+    padding: 1px 6px; border-radius: 4px; font-size: 0.86em;
+  }
+
+  .callout {
+    border-left: 3px solid var(--teal); background: var(--teal-soft);
+    padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; max-width: 66ch;
+  }
+  .callout p { margin: 0; color: var(--text); font-size: 0.93rem; }
+  .callout .callout-label {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--teal); font-weight: 700; display: block; margin-bottom: 4px;
+  }
+
+  /* code blocks */
+  .code-block {
+    background: var(--code-bg); border: 1px solid var(--code-border);
+    border-radius: 10px; overflow: hidden; margin: 16px 0; box-shadow: var(--shadow);
+  }
+  .code-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 14px; border-bottom: 1px solid var(--code-border);
+    background: rgba(255,255,255,0.02);
+  }
+  .code-lang {
+    font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.07em; color: #8a90a3;
+  }
+  .copy-btn {
+    background: transparent; border: 1px solid var(--code-border); color: #b7bccb;
+    font-size: 0.72rem; padding: 3px 10px; border-radius: 5px; cursor: pointer;
+    font-family: var(--font-body);
+  }
+  .copy-btn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+  .code-block pre {
+    margin: 0; padding: 14px 16px; overflow-x: auto;
+    font-family: var(--font-mono); font-size: 0.83rem; line-height: 1.62;
+    color: var(--code-text);
+  }
+  .tok-kw { color: #7fb3e8; }
+  .tok-str { color: #b6d98a; }
+  .tok-com { color: #7a8195; font-style: italic; }
+  .tok-num { color: #e0a866; }
+  .tok-fn { color: #d8b6ea; }
+
+  table.ref-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.88rem; max-width: 68ch; }
+  table.ref-table th, table.ref-table td {
+    text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--text-dim);
+    vertical-align: top;
+  }
+  table.ref-table th { color: var(--text); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.ref-table td:first-child, table.ref-table th:first-child { color: var(--text); font-weight: 600; }
+
+  .checklist { list-style: none; padding: 0; max-width: 66ch; }
+  .checklist li {
+    display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; color: var(--text-dim);
+  }
+  .checklist li::before {
+    content: "☐"; color: var(--accent); font-size: 1rem; line-height: 1.4; flex-shrink: 0;
+  }
+
+  .overflow-x { overflow-x: auto; }
+
+  .back-to-top {
+    position: fixed; bottom: 22px; right: 22px; width: 42px; height: 42px;
+    border-radius: 50%; background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-dim); display: none; align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: var(--shadow); font-size: 1rem;
+  }
+  .back-to-top.show { display: flex; }
+
+  .hidden-by-search { display: none !important; }
+
+  @media (max-width: 860px) {
+    .shell { grid-template-columns: 1fr; }
+    .sidebar {
+      position: relative; height: auto; border-right: none; border-bottom: 1px solid var(--border);
+    }
+    main { padding: 32px 20px 72px; }
+  }
+</style>
+
+<div class="shell">
+  <nav class="sidebar" aria-label="Índice de módulos">
+    <div class="brand">
+      <span class="brand-mark">Cuaderno<span class="accent-dot">·</span>Senior</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema claro/oscuro">◐</button>
+    </div>
+    <p class="subtitle">Python para análisis de datos — referencia de nivel senior</p>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="search" id="searchInput" placeholder="Buscar un tema, función, concepto…" aria-label="Buscar en la referencia" />
+    </div>
+    <div class="search-count" id="searchCount"></div>
+
+    <div class="nav-group-label">Módulos</div>
+    <ul class="nav-list" id="navList"></ul>
+
+    <div class="sidebar-foot">
+      Código ejecutable en <code>notebooks/</code>·Datos en <code>data/</code>.<br/>
+      <code>pip install -r requirements.txt</code>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="hero">
+      <div class="eyebrow">Referencia interactiva · nivel senior</div>
+      <h1>Todo lo que un analista de datos senior debería saber de Python</h1>
+      <p>
+        Ocho módulos, paso a paso, con código real y ejecutable — pensados para finanzas/crédito,
+        e-commerce/tech y datasets públicos. Cada módulo tiene su notebook hermano en
+        <code class="inline" style="color:var(--teal)">notebooks/</code> para practicar con datos reales
+        generados de forma reproducible.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">8 módulos</span>
+        <span class="pill">Notebooks ejecutables incluidos</span>
+        <span class="pill">Datasets: crédito · e-commerce tech · series de tiempo</span>
+      </div>
+    </div>
+
+    <div id="modulesRoot"></div>
+  </main>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+<script>
+/* ============== Contenido ============== */
+const MODULES = [
+{
+  id: "fundamentos", num: "01", title: "Fundamentos de Python para datos",
+  dataset: "credito_solicitudes.csv", notebook: "01_fundamentos_python_datos.ipynb",
+  summary: "No es sintaxis básica: son los hábitos que distinguen código de nivel junior de código que un equipo puede mantener — tipado, rutas portables, ingestión robusta y logging desde el día uno.",
+  topics: [
+    { h: "Estilo senior: type hints, pathlib, f-strings", body: `
+      <p>Tres hábitos que marcan la diferencia frente a código junior: <strong>type hints</strong> en funciones reutilizadas (documentan intención, habilitan autocompletado), <code class="inline">pathlib.Path</code> en vez de concatenar strings para rutas (portable entre SO), y <strong>f-strings con especificadores de formato</strong> (<code class="inline">:,</code>, <code class="inline">:.2%</code>) en vez de redondear a mano.</p>`,
+      code: { lang: "python", src:
+`from pathlib import Path
+import pandas as pd
+
+DATA_DIR = Path("data")
+
+def cargar_credito(path: Path = DATA_DIR / "credito_solicitudes.csv") -> pd.DataFrame:
+    return pd.read_csv(path, parse_dates=["fecha_solicitud"])
+
+df = cargar_credito()
+print(f"Monto total: \${df['monto_solicitado'].sum():,.2f}")
+print(f"Tasa de default: {df['default_90d'].mean():.2%}")` } },
+    { h: "Estructuras idiomáticas: comprehensions, dataclasses, Counter", body: `
+      <p>Antes de tocar pandas, dominar estructuras nativas evita el overhead de crear un DataFrame para algo trivial. <code class="inline">dataclasses</code> representan reglas de negocio o config de forma explícita y tipada, mejor que diccionarios sueltos.</p>`,
+      code: { lang: "python", src:
+`from dataclasses import dataclass, field
+
+@dataclass(frozen=True)
+class ReglaRiesgo:
+    nombre: str
+    score_minimo: int
+    dti_maximo: float
+    monto_maximo: float = field(default=1_000_000)
+
+    def evalua(self, score: float, dti: float, monto: float) -> bool:
+        if pd.isna(score):
+            return False
+        return score >= self.score_minimo and dti <= self.dti_maximo and monto <= self.monto_maximo` } },
+    { h: "Lectura robusta de CSV / Excel / JSON", body: `
+      <p>Los datos llegan sucios: encodings raros, hojas de Excel con encabezados desplazados, JSON anidado. Nunca asumas que <code class="inline">pd.read_csv(path)</code> a secas funcionará en producción.</p>`,
+      code: { lang: "python", src:
+`df = pd.read_csv(
+    "data/credito_solicitudes.csv",
+    parse_dates=["fecha_solicitud"],
+    dtype={"solicitud_id": "string", "sector": "category"},  # category ahorra memoria
+    na_values=["", "NA", "N/A", "null"],
+)
+
+# JSON anidado (típico de APIs) -> tabla plana
+df_json = pd.json_normalize(respuesta_api["solicitudes"], sep="_")
+
+# Excel: hoja específica + saltar encabezado decorativo
+df_excel = pd.read_excel("reporte.xlsx", sheet_name="Detalle", skiprows=2)` } },
+    { h: "Consumo de APIs con reintentos", body: `
+      <p>Patrón estándar para ingestión externa: timeout explícito, reintentos con backoff exponencial y manejo de errores de red — no un <code class="inline">requests.get()</code> desnudo.</p>`,
+      code: { lang: "python", src:
+`import time, requests
+from requests.exceptions import RequestException
+
+def get_con_reintentos(url, params=None, max_intentos=3, timeout=5.0):
+    for intento in range(1, max_intentos + 1):
+        try:
+            resp = requests.get(url, params=params, timeout=timeout)
+            resp.raise_for_status()
+            return resp.json()
+        except RequestException as e:
+            espera = 2 ** intento
+            if intento == max_intentos:
+                raise
+            time.sleep(espera)` } },
+    { h: "Logging en vez de print", body: `
+      <p><code class="inline">print()</code> no escala: sin niveles, sin timestamps, sin filtrado en producción. <code class="inline">logging</code> es estándar y gratis — úsalo desde el primer script que se vaya a programar.</p>`,
+      code: { lang: "python", src:
+`import logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)-8s | %(message)s")
+logger = logging.getLogger("ingesta_credito")
+
+def cargar_con_validacion(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        logger.error(f"Archivo no encontrado: {path}")
+        raise FileNotFoundError(path)
+    df = pd.read_csv(path, parse_dates=["fecha_solicitud"])
+    nulos = df.isna().sum()
+    if nulos.any():
+        logger.warning(f"Columnas con nulos: {dict(nulos[nulos > 0])}")
+    return df` } },
+  ],
+},
+{
+  id: "librerias", num: "02", title: "Librerías clave: NumPy y Pandas avanzado",
+  dataset: "credito_solicitudes.csv · ventas_ecommerce_tech.csv", notebook: "02_librerias_numpy_pandas.ipynb",
+  summary: "Rendimiento y patrones de manipulación que se usan a diario: vectorización, joins con validación de cardinalidad, reshape, ventanas móviles y cuándo migrar a Polars.",
+  topics: [
+    { h: "Vectorización: si estás iterando filas, hay una forma vectorizada", body: `
+      <p>NumPy opera sobre arrays completos en C, evitando el overhead del intérprete por elemento. <code class="inline">np.select</code> es la forma correcta de un if/elif/else vectorizado.</p>`,
+      code: { lang: "python", src:
+`import numpy as np
+
+# dti vectorizado: 10-50x más rápido que un loop en Python puro
+df["dti"] = df["deuda_actual"] / (df["ingreso_mensual"] + 1)
+
+condiciones = [df["buro_score"] >= 700, df["buro_score"] >= 600, df["buro_score"] >= 500]
+categorias = ["A - Bajo riesgo", "B - Riesgo medio", "C - Riesgo alto"]
+df["categoria_riesgo"] = np.select(condiciones, categorias, default="D - Muy alto riesgo")` } },
+    { h: "groupby avanzado: agg nombrado vs. transform", body: `
+      <p><code class="inline">.agg(**kwargs)</code> da agregaciones limpias sin MultiIndex feo. <code class="inline">.transform()</code> alinea el resultado agregado al tamaño original — perfecto para comparar cada fila contra el promedio de su grupo sin perder filas.</p>`,
+      code: { lang: "python", src:
+`resumen = df.groupby("sector", observed=True).agg(
+    n_solicitudes=("solicitud_id", "count"),
+    monto_promedio=("monto_solicitado", "mean"),
+    tasa_default=("default_90d", "mean"),
+).sort_values("tasa_default", ascending=False)
+
+df["monto_promedio_sector"] = df.groupby("sector")["monto_solicitado"].transform("mean")
+df["desviacion_vs_sector"] = df["monto_solicitado"] / df["monto_promedio_sector"] - 1` } },
+    { h: "Merge con validación de cardinalidad", body: `
+      <p>El bug más común en pipelines: un merge que <strong>explota filas</strong> silenciosamente por una relación 1:muchos no esperada. <code class="inline">validate=</code> lanza un error inmediato en vez de dejarte con datos corruptos.</p>`,
+      code: { lang: "python", src:
+`resumen_sector = df.groupby("sector")["buro_score"].mean().reset_index()
+
+df_enriquecido = df.merge(
+    resumen_sector, on="sector", how="left",
+    validate="many_to_one",  # falla si hay duplicados inesperados en la tabla derecha
+)` } },
+    { h: "Reshape: pivot_table y melt", body: `
+      <p>Formato "largo" (tidy) para modelar/graficar; formato "ancho" para reportes ejecutivos. <code class="inline">pivot_table</code> va de largo a ancho, <code class="inline">melt</code> hace lo inverso.</p>`,
+      code: { lang: "python", src:
+`tabla_pivote = ventas.pivot_table(
+    index="categoria", columns="region", values="ingresos",
+    aggfunc="sum", margins=True,
+)
+
+ventas_tidy = tabla_ancha.reset_index().melt(
+    id_vars="mes", var_name="categoria", value_name="ingresos"
+)` } },
+    { h: "Ventanas móviles y resample", body: `
+      <p><code class="inline">rolling</code> (ventana deslizante) y <code class="inline">resample</code> (agregación por calendario real, no "cada N filas") son la base de cualquier análisis de tendencia antes de forecasting.</p>`,
+      code: { lang: "python", src:
+`serie = ventas.groupby("fecha")["ingresos"].sum().sort_index()
+media_movil_7d = serie.rolling(window=7, min_periods=1).mean()
+ingresos_mensuales = serie.resample("ME").sum()` } },
+    { h: "Performance: category, query/eval, y cuándo migrar a Polars", body: `
+      <p><code class="inline">astype("category")</code> en columnas de baja cardinalidad acelera groupby. <code class="inline">df.query()</code> usa un motor optimizado (numexpr). Si pandas se vuelve el cuello de botella (varios GB, muchos joins), <strong>Polars</strong> suele dar 5-30x de mejora sin reescribir toda la lógica.</p>`,
+      code: { lang: "python", src:
+`alto_riesgo = df.query("buro_score < 550 and monto_solicitado > 300_000")
+
+# Polars (API similar, backend en Rust, paralelo por defecto, ejecución "lazy")
+import polars as pl
+resultado = (
+    pl.scan_csv("data/ventas_ecommerce_tech.csv", try_parse_dates=True)
+    .filter(pl.col("categoria") == "Laptops")
+    .group_by("region").agg(pl.col("ingresos").sum())
+    .collect()
+)` } },
+  ],
+},
+{
+  id: "sql", num: "03", title: "SQL y bases de datos",
+  dataset: "SQLite en memoria (desde los CSVs)", notebook: "03_sql_bases_datos.ipynb",
+  summary: "Cuándo empujar trabajo a SQL en vez de traer todo a pandas: agregaciones, joins seguros, window functions y el patrón correcto para nunca escribir SQL vulnerable a inyección.",
+  topics: [
+    { h: "SELECT / WHERE / GROUP BY / HAVING", body: `
+      <p>Orden lógico real de ejecución: <code class="inline">FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</code>. Por eso <code class="inline">HAVING</code> filtra sobre agregados y <code class="inline">WHERE</code> no puede usar un alias de <code class="inline">SELECT</code>.</p>`,
+      code: { lang: "sql", src:
+`SELECT
+    sector,
+    COUNT(*) AS n_solicitudes,
+    ROUND(AVG(monto_solicitado), 2) AS monto_promedio,
+    ROUND(AVG(default_90d) * 100, 1) AS tasa_default_pct
+FROM solicitudes
+WHERE buro_score IS NOT NULL
+GROUP BY sector
+HAVING COUNT(*) > 100
+ORDER BY tasa_default_pct DESC;` } },
+    { h: "JOINs y el fan-out", body: `
+      <p><strong>Fan-out:</strong> cuando la tabla derecha tiene múltiples filas por llave, el join multiplica filas de la izquierda — causa #1 de "mis totales no cuadran". Siempre valida el conteo de filas antes/después de un join.</p>`,
+      code: { lang: "sql", src:
+`SELECT s.solicitud_id, s.sector, s.monto_solicitado, r.tasa_default_sector
+FROM solicitudes s
+LEFT JOIN (
+    SELECT sector, ROUND(AVG(default_90d), 3) AS tasa_default_sector
+    FROM solicitudes GROUP BY sector
+) r ON s.sector = r.sector;
+-- Tabla derecha con 1 fila por sector -> join seguro, no hay fan-out` } },
+    { h: "Window functions: rankings y acumulados", body: `
+      <p>A diferencia de <code class="inline">GROUP BY</code> (colapsa filas), las window functions calculan un agregado sin perder el detalle por fila — perfectas para "top N por grupo" y totales acumulados.</p>`,
+      code: { lang: "sql", src:
+`SELECT * FROM (
+    SELECT sector, solicitud_id, monto_solicitado,
+           RANK() OVER (PARTITION BY sector ORDER BY monto_solicitado DESC) AS ranking
+    FROM solicitudes
+)
+WHERE ranking <= 2;
+
+-- Running total con SUM() OVER
+SELECT fecha, SUM(ingresos) OVER (ORDER BY fecha
+    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS acumulado
+FROM ventas;` } },
+    { h: "pandas.read_sql y parámetros bind (seguridad)", body: `
+      <p>SQLAlchemy se justifica cuando el pipeline debe funcionar contra múltiples motores. Pero la regla que nunca se rompe: <strong>nunca construir SQL con f-strings sobre input externo</strong> — usa siempre parámetros bind.</p>`,
+      code: { lang: "python", src:
+`# MAL — vulnerable a SQL injection:
+# query = f"SELECT * FROM solicitudes WHERE sector = '{sector_input}'"
+
+# BIEN — placeholders:
+query = "SELECT COUNT(*) AS n FROM solicitudes WHERE sector = ?"
+pd.read_sql(query, conn, params=(sector_input,))
+
+# Con SQLAlchemy:
+from sqlalchemy import text
+query = text("SELECT * FROM solicitudes WHERE sector = :sector")
+pd.read_sql(query, engine, params={"sector": "Tecnología"})` } },
+    { h: "CTEs (WITH) en vez de subqueries anidadas", body: `
+      <p>Las Common Table Expressions se leen de arriba a abajo, como pasos de un pipeline — mucho más mantenibles que subqueries anidadas de tres niveles.</p>`,
+      code: { lang: "sql", src:
+`WITH resumen_sector AS (
+    SELECT sector, AVG(default_90d) AS tasa_default
+    FROM solicitudes GROUP BY sector
+),
+sectores_riesgo_alto AS (
+    SELECT sector FROM resumen_sector
+    WHERE tasa_default > (SELECT AVG(tasa_default) FROM resumen_sector)
+)
+SELECT s.* FROM solicitudes s
+INNER JOIN sectores_riesgo_alto r ON s.sector = r.sector;` } },
+  ],
+},
+{
+  id: "estadistica", num: "04", title: "Estadística aplicada",
+  dataset: "credito_solicitudes.csv", notebook: "04_estadistica_aplicada.ipynb",
+  summary: "Cuantificar incertidumbre y evitar conclusiones falsas: distribuciones, intervalos de confianza, pruebas de hipótesis, y por qué 'significativo' no siempre significa 'importante'.",
+  topics: [
+    { h: "Más allá de .describe(): asimetría y curtosis", body: `
+      <p>Si media y mediana difieren mucho, la distribución está sesgada y la media sola es un resumen engañoso — típico en variables de dinero (ingresos, montos).</p>`,
+      code: { lang: "python", src:
+`from scipy import stats
+resumen = pd.Series({
+    "media": ingreso.mean(), "mediana": ingreso.median(),
+    "asimetria": stats.skew(ingreso), "curtosis": stats.kurtosis(ingreso),
+})` } },
+    { h: "Normalidad: probarla, no asumirla", body: `
+      <p>Muchos métodos clásicos asumen normalidad de residuos. Shapiro-Wilk la cuantifica en vez de "verla a ojo" en un histograma. Variables de dinero sesgadas suelen normalizarse con <code class="inline">np.log1p(x)</code>.</p>`,
+      code: { lang: "python", src:
+`stat, p = stats.shapiro(muestra)
+# p < 0.05 -> rechazamos normalidad
+
+log_ingreso = np.log(ingreso)  # log-transform antes de correlación/regresión lineal` } },
+    { h: "Intervalos de confianza: paramétrico vs. bootstrap", body: `
+      <p>El bootstrap (remuestreo con reemplazo) no asume ninguna forma de distribución — más robusto que el IC paramétrico, especialmente con muestras chicas o estadísticos no-lineales (mediana, percentiles).</p>`,
+      code: { lang: "python", src:
+`def bootstrap_ic(datos, func=np.mean, n_boot=5000, alpha=0.05, rng=RNG):
+    boot = [func(rng.choice(datos, size=len(datos), replace=True)) for _ in range(n_boot)]
+    return np.percentile(boot, [100*alpha/2, 100*(1-alpha/2)])` } },
+    { h: "Pruebas de hipótesis y p-hacking", body: `
+      <p>t-test (Welch si las varianzas difieren, verificado con Levene) para comparar dos medias; chi-cuadrado para independencia entre categóricas. Probar 20 variables "a ver cuál da p&lt;0.05" garantiza falsos positivos — corrige con Bonferroni si haces pruebas múltiples.</p>`,
+      code: { lang: "python", src:
+`_, p_levene = stats.levene(grupo_a, grupo_b)
+t_stat, p = stats.ttest_ind(grupo_a, grupo_b, equal_var=(p_levene >= 0.05))
+
+chi2, p_chi, gl, esperado = stats.chi2_contingency(pd.crosstab(df["sector"], df["default_90d"]))` } },
+    { h: "Correlación vs. causalidad", body: `
+      <p>Dos trampas: (1) una tercera variable oculta genera correlación espuria — controla con correlación parcial; (2) relaciones no-lineales fuertes pueden dar Pearson ≈ 0. <strong>Siempre grafica antes de confiar en un coeficiente.</strong></p>`,
+      code: { lang: "python", src:
+`x = RNG.uniform(-3, 3, 2000)
+y = x**2 + RNG.normal(0, 0.3, 2000)  # relación cuadrática perfecta
+r_pearson, _ = stats.pearsonr(x, y)  # ~0, sugiere "no hay relación" (FALSO)` } },
+    { h: "Tamaño de efecto: Cohen's d", body: `
+      <p>Con n grande, hasta diferencias triviales dan p&lt;0.05. Cohen's d cuantifica qué tan grande es la diferencia en unidades de desviación estándar, independiente del tamaño de muestra.</p>`,
+      code: { lang: "python", src:
+`def cohens_d(a, b):
+    n1, n2 = len(a), len(b)
+    var_pooled = ((n1-1)*a.var(ddof=1) + (n2-1)*b.var(ddof=1)) / (n1+n2-2)
+    return (a.mean() - b.mean()) / np.sqrt(var_pooled)
+# 0.2 pequeño · 0.5 mediano · 0.8 grande` } },
+  ],
+},
+{
+  id: "eda", num: "05", title: "Análisis Exploratorio de Datos (EDA)",
+  dataset: "credito_solicitudes.csv (con nulos y duplicados reales)", notebook: "05_analisis_exploratorio_eda.ipynb",
+  summary: "Un proceso sistemático y repetible, no 'correr .describe() y graficar al azar': calidad de datos antes que patrones, patrones antes que features.",
+  topics: [
+    { h: "Duplicados: detectar y decidir", body: `
+      <p>Un ID que debería ser único y no lo es suele ser un bug del pipeline de ingesta (doble carga, join mal hecho) — se detecta y se decide explícitamente, nunca se ignora.</p>`,
+      code: { lang: "python", src:
+`n_dup = df.duplicated(subset="solicitud_id").sum()
+df = df.drop_duplicates(subset="solicitud_id", keep="first")` } },
+    { h: "Nulos: el patrón importa más que la imputación", body: `
+      <p><strong>MCAR</strong> (aleatorio puro): imputar con media/mediana es seguro. <strong>MAR</strong> (depende de otra variable observada): imputar condicionando en esa variable. <strong>MNAR</strong> (depende del propio valor faltante): la imputación simple sesga — considera un indicador de "faltante" como feature en vez de rellenar a ciegas.</p>`,
+      code: { lang: "python", src:
+`# MAR leve: imputar mediana POR SECTOR, no mediana global
+mediana_sector = df.groupby("sector")["ingreso_mensual"].transform("median")
+df["ingreso_imputado"] = df["ingreso_mensual"].fillna(mediana_sector)
+
+# Posible MNAR: NO imputar, el nulo mismo es información
+df["sin_historial_crediticio"] = df["buro_score"].isna().astype(int)` } },
+    { h: "Outliers: estadística + criterio de negocio", body: `
+      <p>Un outlier estadístico no siempre es un error — puede ser un cliente corporativo legítimo. Se <strong>detecta</strong> con IQR o z-score robusto (basado en mediana/MAD, mejor que z-score clásico con datos sesgados), y se <strong>decide</strong> con contexto.</p>`,
+      code: { lang: "python", src:
+`def outliers_iqr(serie, k=1.5):
+    q1, q3 = serie.quantile([0.25, 0.75])
+    iqr = q3 - q1
+    return (serie < q1 - k*iqr) | (serie > q3 + k*iqr)
+
+mediana = serie.median()
+mad = (serie - mediana).abs().median()
+z_robusto = 0.6745 * (serie - mediana) / mad  # |z| > 3.5 -> outlier` } },
+    { h: "Univariado y bivariado sistemático", body: `
+      <p>Un checklist repetible en vez de graficar al azar: frecuencias por categórica (¿categorías raras &lt;3%?), y tasa del target por cuartil de cada variable numérica candidata.</p>`,
+      code: { lang: "python", src:
+`for col in ["buro_score", "ingreso_mensual", "antiguedad_empresa_anios"]:
+    bins = pd.qcut(df[col], q=4, duplicates="drop")
+    print(df.groupby(bins)["default_90d"].agg(["mean", "count"]))` } },
+    { h: "Checklist de reporte de calidad", body: `
+      <p>Antes de pasar el dataset a modelado, documenta: filas originales vs. tras deduplicar, columnas con nulos y su estrategia, outliers detectados y la decisión tomada, features nuevas generadas.</p>` },
+  ],
+},
+{
+  id: "visualizacion", num: "06", title: "Visualización de datos",
+  dataset: "ventas_ecommerce_tech.csv · credito_solicitudes.csv", notebook: "06_visualizacion_datos.ipynb",
+  summary: "Una gráfica comunica una decisión, no se ve 'bonita'. Paleta por función, un solo eje siempre, y saber cuándo Matplotlib, Plotly o Streamlit.",
+  topics: [
+    { h: "Paleta por función: categórica, secuencial, diverging", body: `
+      <p>Categórica = identidad (orden <strong>fijo</strong>, nunca ciclado al azar). Secuencial = magnitud continua (un solo tono, claro→oscuro — nunca rainbow). Diverging = polaridad (dos tonos + punto medio neutro, para valores que pueden ser + o −).</p>`,
+      code: { lang: "python", src:
+`CATEGORICO = ["#2a78d6", "#1baf7a", "#eda100", "#008300", "#4a3aa7", "#e34948"]
+SECUENCIAL = sns.light_palette("#2a78d6", as_cmap=True)     # magnitud
+DIVERGING  = "RdBu_r"                                       # correlación, centrado en 0` } },
+    { h: "Magnitudes: barras horizontales + etiquetas directas", body: `
+      <p>Para comparar &gt;4 categorías, barras horizontales ordenadas superan casi siempre al pie chart: más fáciles de leer y permiten etiquetas con el valor exacto.</p>`,
+      code: { lang: "python", src:
+`orden = ingresos_por_categoria.sort_values()
+fig, ax = plt.subplots()
+barras = ax.barh(orden.index, orden.values, color=CATEGORICO[0])
+for b, v in zip(barras, orden.values):
+    ax.text(v, b.get_y() + b.get_height()/2, f"\${v:.1f}M", va="center")` } },
+    { h: "Tendencia en el tiempo: nunca doble eje", body: `
+      <p>Comparar dos métricas de escala distinta con dos ejes Y hace que el ojo no pueda comparar pendientes — y permite "mentir" ajustando la escala. Alternativa: <strong>indexar a base 100</strong> o usar <strong>small multiples</strong> (paneles apilados).</p>`,
+      code: { lang: "python", src:
+`# Indexado a base común -> ambas series en la MISMA escala
+indexado = serie_mensual / serie_mensual.iloc[0] * 100
+ax.plot(indexado.index, indexado["unidades"], label="Unidades")
+ax.plot(indexado.index, indexado["precio"], label="Precio")
+ax.axhline(100, linestyle="--")` } },
+    { h: "Distribución: histograma, KDE, boxplot", body: `
+      <p>Histograma = forma general de una variable. KDE = comparar 2-3 distribuciones superpuestas sin saturar. Boxplot = comparar la misma variable entre muchas categorías a la vez, sacrificando forma por compacidad.</p>`,
+      code: { lang: "python", src:
+`sns.kdeplot(sin_default, fill=True, label="Sin default")
+sns.kdeplot(con_default, fill=True, label="Con default")
+
+sns.boxplot(data=df, x="monto_solicitado", y="sector", order=orden_por_mediana)` } },
+    { h: "Plotly para interactividad, Streamlit para dashboards", body: `
+      <p>Matplotlib/Seaborn para reportes estáticos. Plotly cuando el usuario final necesita explorar (zoom, hover, filtrar desde la leyenda). Streamlit cuando necesita un dashboard interactivo completo sin escribir frontend.</p>`,
+      code: { lang: "python", src:
+`# Streamlit — python -m streamlit run dashboard.py
+import streamlit as st
+st.title("Dashboard de Ventas")
+categorias = st.multiselect("Categoría", ventas["categoria"].unique())
+st.plotly_chart(px.line(filtrado, x="fecha", y="ingresos", color="categoria"))` } },
+    { h: "Anti-patrones que evitar siempre", body: "", table: {
+      head: ["Anti-patrón", "Por qué falla", "Alternativa"],
+      rows: [
+        ["Doble eje Y", "El ojo no compara pendientes en escalas distintas", "Indexar a base 100, o small multiples"],
+        ["Pie chart >4 categorías", "El ángulo es difícil de comparar", "Barras horizontales ordenadas"],
+        ["Rainbow para magnitud", "El cerebro no lo percibe como ordenado", "Rampa secuencial de un solo tono"],
+        ["Colores cíclicos por categoría", "Un filtro repinta a las series que quedan", "Orden categórico fijo por entidad"],
+        ["Truncar el eje Y sin decirlo", "Exagera visualmente diferencias pequeñas", "Empezar en 0, o marcar el corte"],
+      ],
+    }},
+  ],
+},
+{
+  id: "ml", num: "07", title: "Modelos predictivos y Machine Learning",
+  dataset: "credito_solicitudes.csv · precios_acciones_tech.csv", notebook: "07_modelos_predictivos_ml.ipynb",
+  summary: "De EDA a modelos defendibles frente a un equipo de riesgo: splits correctos, pipelines sin fuga de datos, y métricas que le importan al negocio, no solo accuracy.",
+  topics: [
+    { h: "Split correcto y data leakage", body: `
+      <p><strong>Leakage</strong> = información del futuro o del target se cuela en los features. Con estructura temporal, el split debe ser temporal, no aleatorio. Preprocesar (imputar, escalar) <strong>antes</strong> de separar train/test infla el desempeño reportado.</p>`,
+      code: { lang: "python", src:
+`X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42,
+    stratify=y,  # mantiene la MISMA proporción de la clase minoritaria en ambos sets
+)` } },
+    { h: "Pipeline + ColumnTransformer: leakage imposible por diseño", body: `
+      <p>Un <code class="inline">Pipeline</code> encapsula preprocesamiento + modelo: se ajusta solo con train y garantiza que exactamente la misma transformación se aplique en test/producción.</p>`,
+      code: { lang: "python", src:
+`preprocesador = ColumnTransformer([
+    ("num", Pipeline([("imputer", SimpleImputer(strategy="median")),
+                       ("scaler", StandardScaler())]), features_num),
+    ("cat", OneHotEncoder(handle_unknown="ignore"), features_cat),
+])
+pipe = Pipeline([("prep", preprocesador), ("modelo", RandomForestClassifier())])` } },
+    { h: "Clasificación: ROC-AUC y precision/recall, no accuracy", body: `
+      <p>Con clases desbalanceadas (17.8% default), un modelo que siempre predice "no default" ya tiene ~82% accuracy y es inútil. <code class="inline">class_weight="balanced"</code> compensa el desbalance; el threshold de decisión (no 0.5 por defecto) es una elección de negocio.</p>`,
+      code: { lang: "python", src:
+`modelo = RandomForestClassifier(class_weight="balanced", n_estimators=300)
+pipe.fit(X_train, y_train)
+proba = pipe.predict_proba(X_test)[:, 1]
+print(roc_auc_score(y_test, proba))
+print(classification_report(y_test, pipe.predict(X_test)))` } },
+    { h: "Validación cruzada y búsqueda de hiperparámetros", body: `
+      <p>Un solo split puede ser optimista/pesimista por azar. K-Fold estratificado promedia sobre varios splits. <code class="inline">RandomizedSearchCV</code> explora el espacio de hiperparámetros más eficientemente que <code class="inline">GridSearchCV</code>.</p>`,
+      code: { lang: "python", src:
+`cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+busqueda = RandomizedSearchCV(pipe, espacio_parametros, n_iter=12, cv=cv, scoring="roc_auc")
+busqueda.fit(X_train, y_train)` } },
+    { h: "Regresión: MAE, RMSE, R² — y siempre un baseline", body: `
+      <p>MAE es interpretable en unidades originales, RMSE penaliza más los errores grandes, R² no dice si el modelo es <em>útil</em>, solo si explica varianza histórica. Compara siempre contra predecir la media.</p>`,
+      code: { lang: "python", src:
+`mae_modelo = mean_absolute_error(y_test, pipe_reg.predict(X_test))
+mae_baseline = mean_absolute_error(y_test, np.full_like(y_test, y_train.mean()))
+mejora = 1 - mae_modelo / mae_baseline` } },
+    { h: "Clustering: justificar k, no adivinarlo", body: `
+      <p>K-Means requiere elegir k. El método del codo (inercia) y el silhouette score son las formas estándar de justificarlo.</p>`,
+      code: { lang: "python", src:
+`for k in range(2, 9):
+    km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X_scaled)
+    print(k, silhouette_score(X_scaled, km.labels_))` } },
+    { h: "Series de tiempo: el baseline manda", body: `
+      <p>Regla de oro: compara siempre contra un baseline ingenuo (random walk / última media móvil). Un modelo que no le gana al baseline no tiene caso de negocio — y en precios financieros eficientes, ganarle consistentemente sería una señal de arbitraje.</p>`,
+      code: { lang: "python", src:
+`# split TEMPORAL, nunca aleatorio en series de tiempo
+corte = df_ts.index[-60]
+train, test = df_ts[df_ts.index < corte], df_ts[df_ts.index >= corte]
+baseline = test["lag_1"]  # "mañana = precio de hoy"` } },
+    { h: "Interpretabilidad: permutation importance y SHAP", body: `
+      <p><code class="inline">feature_importances_</code> puede sobre-favorecer variables de alta cardinalidad. <strong>Permutation importance</strong> mide la caída real en performance al mezclar cada feature — más confiable. Para explicar una predicción individual, SHAP es el estándar de la industria.</p>`,
+      code: { lang: "python", src:
+`from sklearn.inspection import permutation_importance
+r = permutation_importance(pipe, X_test, y_test, scoring="roc_auc", n_repeats=10)
+pd.Series(r.importances_mean, index=X_test.columns).sort_values(ascending=False)` } },
+  ],
+},
+{
+  id: "automatizacion", num: "08", title: "Automatización y producción",
+  dataset: "scripts/etl_credito.py (pipeline real del proyecto)", notebook: "08_automatizacion_pipelines.ipynb",
+  summary: "Que el pipeline se pueda correr de forma confiable, repetida y desatendida: validación de esquema, testing, reportes automáticos, secretos y scheduling.",
+  topics: [
+    { h: "Pipeline ETL modular y testeable", body: `
+      <p>Separar en funciones puras <code class="inline">extract / validar_esquema / transform / load</code> hace posible testear cada paso y reusar la lógica tanto desde un cron job como desde un notebook de exploración. El antipatrón: un notebook de 200 celdas donde todo está mezclado.</p>`,
+      code: { lang: "python", src:
+`def ejecutar_pipeline(path_entrada: Path, path_salida: Path) -> pd.DataFrame:
+    df = extract(path_entrada)
+    df = validar_esquema(df)
+    df = transform(df)
+    load(df, path_salida)
+    return df` } },
+    { h: "Validación de esquema con pandera", body: `
+      <p>Sin un contrato de datos explícito, un cambio silencioso en la fuente se detecta tarde. <code class="inline">pandera</code> define el esquema como código y falla ruidosamente si no se cumple.</p>`,
+      code: { lang: "python", src:
+`import pandera.pandas as pa
+from pandera.pandas import Column, Check
+
+ESQUEMA = pa.DataFrameSchema({
+    "buro_score": Column(float, Check.in_range(300, 850), nullable=True),
+    "monto_solicitado": Column(float, Check.greater_than(0)),
+    "default_90d": Column(int, Check.isin([0, 1])),
+})
+df_validado = ESQUEMA.validate(df, lazy=True)` } },
+    { h: "Testing de pipelines con pytest", body: `
+      <p>No se testea "que corra sin error" (muy débil) sino invariantes concretos: sin duplicados, sin nulos donde no deberían existir, rangos válidos.</p>`,
+      code: { lang: "python", src:
+`def test_transform_elimina_duplicados(df_transformado):
+    assert df_transformado["solicitud_id"].duplicated().sum() == 0
+
+def test_transform_dti_no_es_negativo(df_transformado):
+    assert (df_transformado["dti"] >= 0).all()
+# pytest scripts/test_etl_credito.py -v` } },
+    { h: "Configuración y secretos: nunca hardcodear", body: `
+      <p>Variables de entorno + <code class="inline">.env</code> para desarrollo local. El <code class="inline">.env</code> va en <code class="inline">.gitignore</code>, nunca se commitea.</p>`,
+      code: { lang: "python", src:
+`from dotenv import load_dotenv
+import os
+load_dotenv()
+db_host = os.environ.get("DB_HOST", "localhost")
+password = os.environ["DB_PASSWORD"]  # KeyError explícito si falta` } },
+    { h: "Scheduling: cron, APScheduler, Airflow", body: `
+      <p>cron para jobs simples de un script. APScheduler para scheduling dentro de un proceso Python de larga duración. Airflow/Dagster/Prefect cuando hay múltiples pipelines con dependencias, reintentos y necesitas monitoreo.</p>`,
+      code: { lang: "bash", src:
+`# Correr el ETL todos los días a las 6:00 AM
+0 6 * * * cd /proyecto && venv/bin/python scripts/etl_credito.py \\
+  --input data/in.csv --output data/out.csv >> logs/etl.log 2>&1` } },
+    { h: "Empaquetado: requirements, Docker, CLI", body: `
+      <p><code class="inline">requirements.txt</code> con versiones fijas evita "funciona en mi máquina". Docker garantiza que el pipeline corra igual en cualquier entorno. Una CLI con <code class="inline">click</code> evita rutas hardcodeadas.</p>`,
+      code: { lang: "python", src:
+`import click
+
+@click.command()
+@click.option("--input", "path_entrada", required=True, type=click.Path(exists=True))
+@click.option("--output", "path_salida", required=True)
+def cli(path_entrada, path_salida):
+    ejecutar_pipeline(Path(path_entrada), Path(path_salida))
+# uso: python scripts/etl_credito.py --input data/in.csv --output data/out.csv` } },
+    { h: "Git para proyectos de datos", body: null, list: [
+      "<strong>.gitignore</strong>: nunca <code class=\"inline\">.env</code>, secretos, ni CSVs pesados sin versionado de datos (DVC/Git LFS si hace falta).",
+      "<strong>Notebooks en git</strong>: limpiar outputs pesados antes de commitear (<code class=\"inline\">nbstripout</code>) o los diffs son ilegibles.",
+      "<strong>Mensajes de commit</strong> que expliquen el <em>por qué</em>, no el <em>qué</em> — el diff ya muestra el qué.",
+      "Un notebook no es el artefacto final de producción: la lógica que se repite se gradúa a un módulo <code class=\"inline\">.py</code> testeado.",
+    ]},
+  ],
+},
+];
+
+/* ============== Syntax highlighting (ligero, sin dependencias) ============== */
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+const PY_KEYWORDS = "def class import from as return if elif else for while in is not and or try except finally raise with lambda yield pass break continue global nonlocal assert del None True False self".split(" ");
+const SQL_KEYWORDS = "SELECT FROM WHERE GROUP BY ORDER HAVING JOIN LEFT RIGHT INNER OUTER ON AS WITH CASE WHEN THEN ELSE END AND OR NOT IN IS NULL DISTINCT LIMIT UNION ALL BETWEEN LIKE OVER PARTITION ROWS RANGE UNBOUNDED PRECEDING CURRENT ROW INSERT INTO VALUES UPDATE SET DELETE CREATE TABLE INDEX PRIMARY KEY FOREIGN REFERENCES COUNT SUM AVG ROUND RANK".split(" ");
+
+function highlightPython(escaped) {
+  const re = /(#.*$)|('''[\s\S]*?'''|"""[\s\S]*?"""|f?"(?:[^"\\\n]|\\.)*"|f?'(?:[^'\\\n]|\\.)*')|\b(\d+\.?\d*)\b|\b(def|class|import|from|as|return|if|elif|else|for|while|in|is|not|and|or|try|except|finally|raise|with|lambda|yield|pass|break|continue|global|nonlocal|assert|del|None|True|False|self)\b|\b([a-zA-Z_]\w*)(?=\()/gm;
+  return escaped.replace(re, (m, com, str, num, kw, fn) => {
+    if (com !== undefined) return `<span class="tok-com">${m}</span>`;
+    if (str !== undefined) return `<span class="tok-str">${m}</span>`;
+    if (num !== undefined) return `<span class="tok-num">${m}</span>`;
+    if (kw !== undefined) return `<span class="tok-kw">${m}</span>`;
+    if (fn !== undefined) return `<span class="tok-fn">${m}</span>`;
+    return m;
+  });
+}
+function highlightSql(escaped) {
+  const kwPattern = SQL_KEYWORDS.join("|");
+  const re = new RegExp(`(--.*$)|('(?:[^'\\\\]|\\\\.)*')|\\b(\\d+\\.?\\d*)\\b|\\b(${kwPattern})\\b`, "gmi");
+  return escaped.replace(re, (m, com, str, num, kw) => {
+    if (com !== undefined) return `<span class="tok-com">${m}</span>`;
+    if (str !== undefined) return `<span class="tok-str">${m}</span>`;
+    if (num !== undefined) return `<span class="tok-num">${m}</span>`;
+    if (kw !== undefined) return `<span class="tok-kw">${m}</span>`;
+    return m;
+  });
+}
+function highlightBash(escaped) {
+  const re = /(#.*$)|("(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*')|\b(cron|python|pip|venv|source|activate)\b/gm;
+  return escaped.replace(re, (m, com, str, kw) => {
+    if (com !== undefined) return `<span class="tok-com">${m}</span>`;
+    if (str !== undefined) return `<span class="tok-str">${m}</span>`;
+    if (kw !== undefined) return `<span class="tok-kw">${m}</span>`;
+    return m;
+  });
+}
+function highlight(code, lang) {
+  const escaped = escapeHtml(code);
+  if (lang === "sql") return highlightSql(escaped);
+  if (lang === "bash") return highlightBash(escaped);
+  return highlightPython(escaped);
+}
+
+/* ============== Render ============== */
+const navList = document.getElementById("navList");
+const modulesRoot = document.getElementById("modulesRoot");
+
+function renderTopic(topic, mIdx, tIdx) {
+  const el = document.createElement("section");
+  el.className = "topic";
+  el.dataset.search = (topic.h + " " + (topic.body || "") + " " + (topic.code ? topic.code.src : "") + " " + (topic.list ? topic.list.join(" ") : "") + " " + (topic.table ? JSON.stringify(topic.table) : "")).toLowerCase();
+
+  let html = `<h3><span class="topic-num">${String(tIdx + 1).padStart(2, "0")}</span>${topic.h}</h3>`;
+  if (topic.body) html += topic.body;
+  if (topic.list) {
+    html += `<ul>${topic.list.map(li => `<li>${li}</li>`).join("")}</ul>`;
+  }
+  if (topic.table) {
+    html += `<div class="overflow-x"><table class="ref-table"><thead><tr>${topic.table.head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${
+      topic.table.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")
+    }</tbody></table></div>`;
+  }
+  el.innerHTML = html;
+
+  if (topic.code) {
+    const block = document.createElement("div");
+    block.className = "code-block";
+    const codeId = `code-${mIdx}-${tIdx}`;
+    block.innerHTML = `
+      <div class="code-head">
+        <span class="code-lang">${topic.code.lang}</span>
+        <button class="copy-btn" data-target="${codeId}">Copiar</button>
+      </div>
+      <pre><code id="${codeId}">${highlight(topic.code.src, topic.code.lang)}</code></pre>`;
+    el.appendChild(block);
+  }
+  return el;
+}
+
+function renderModule(mod, mIdx) {
+  const section = document.createElement("article");
+  section.className = "module";
+  section.id = mod.id;
+  section.innerHTML = `
+    <div class="module-kicker">
+      <span class="module-num">${mod.num}</span>
+      <span class="module-dataset">${mod.dataset}</span>
+    </div>
+    <h2>${mod.title}</h2>
+    <p class="module-summary">${mod.summary}</p>
+    <div class="module-notebook">📓 Práctica guiada: <code>notebooks/${mod.notebook}</code></div>
+  `;
+  mod.topics.forEach((t, tIdx) => section.appendChild(renderTopic(t, mIdx, tIdx)));
+  modulesRoot.appendChild(section);
+
+  const li = document.createElement("li");
+  li.className = "nav-item";
+  li.innerHTML = `<a class="nav-link" href="#${mod.id}" data-target="${mod.id}"><span class="nav-num">${mod.num}</span>${mod.title}</a>`;
+  navList.appendChild(li);
+}
+
+MODULES.forEach(renderModule);
+
+/* copy buttons */
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".copy-btn");
+  if (!btn) return;
+  const codeEl = document.getElementById(btn.dataset.target);
+  const text = codeEl.innerText;
+  navigator.clipboard?.writeText(text).then(() => {
+    const original = btn.textContent;
+    btn.textContent = "¡Copiado!";
+    setTimeout(() => (btn.textContent = original), 1400);
+  });
+});
+
+/* active nav on scroll */
+const navLinks = [...document.querySelectorAll(".nav-link")];
+const moduleEls = [...document.querySelectorAll(".module")];
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove("active"));
+      const active = navLinks.find(l => l.dataset.target === entry.target.id);
+      if (active) active.classList.add("active");
+    }
+  });
+}, { rootMargin: "-15% 0px -70% 0px" });
+moduleEls.forEach(el => observer.observe(el));
+
+/* search */
+const searchInput = document.getElementById("searchInput");
+const searchCount = document.getElementById("searchCount");
+searchInput.addEventListener("input", () => {
+  const q = searchInput.value.trim().toLowerCase();
+  let visibleTopics = 0;
+  moduleEls.forEach((modEl) => {
+    const topics = [...modEl.querySelectorAll(".topic")];
+    let anyVisible = false;
+    topics.forEach((t) => {
+      const match = !q || t.dataset.search.includes(q);
+      t.classList.toggle("hidden-by-search", !match);
+      if (match) { anyVisible = true; visibleTopics++; }
+    });
+    const modMatches = !q || modEl.querySelector("h2").textContent.toLowerCase().includes(q) || modEl.querySelector(".module-summary").textContent.toLowerCase().includes(q);
+    modEl.classList.toggle("hidden-by-search", !anyVisible && !modMatches);
+    if (modMatches && !anyVisible) {
+      topics.forEach(t => t.classList.remove("hidden-by-search"));
+    }
+    const navLink = document.querySelector(`.nav-link[data-target="${modEl.id}"]`);
+    if (navLink) navLink.closest(".nav-item").classList.toggle("hidden-by-search", !anyVisible && !modMatches);
+  });
+  searchCount.textContent = q ? `${visibleTopics} resultado${visibleTopics === 1 ? "" : "s"}` : "";
+});
+
+/* theme toggle */
+const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+function applyStoredTheme() {
+  const stored = localStorage.getItem("cs-theme");
+  if (stored) root.setAttribute("data-theme", stored);
+}
+applyStoredTheme();
+themeToggle.addEventListener("click", () => {
+  const current = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const next = current === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("cs-theme", next);
+});
+
+/* back to top */
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("show", window.scrollY > 800);
+});
+backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+</script>
