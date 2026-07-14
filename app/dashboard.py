@@ -20,9 +20,27 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "src"))
 
 from customer_insights.graph.word_graph import construir_grafo_coocurrencia, palabras_mas_influyentes  # noqa: E402
+from customer_insights.ingestion.csv_loader import CSVConnector  # noqa: E402
+from customer_insights.pipeline import ejecutar_pipeline  # noqa: E402
 
 DIR_PROCESADOS = RAIZ / "data" / "processed"
 RUTA_DATASET = DIR_PROCESADOS / "comentarios_procesados.csv"
+RUTA_MUESTRA = RAIZ / "data" / "sample" / "resenas_banca_muestra.csv"
+
+
+def asegurar_datos_procesados() -> None:
+    """Genera data/processed/* con el dataset de muestra si aun no existen.
+
+    En un despliegue en Streamlit Community Cloud el repo se clona sin los
+    artefactos de data/processed (estan en .gitignore porque se regeneran).
+    Esto hace que la demo publica se auto-inicialice en el primer arranque,
+    sin depender de que alguien corra el pipeline manualmente antes.
+    """
+    if RUTA_DATASET.exists():
+        return
+    with st.spinner("Generando datos de la demo por primera vez (unos segundos)..."):
+        conector = CSVConnector(RUTA_MUESTRA, fuente="encuesta_nps")
+        ejecutar_pipeline(conector, backend_sentimiento="lexicon", escala_calificacion=5, dir_salida=DIR_PROCESADOS)
 
 # --- Paleta validada (ver skill de dataviz): status para sentimiento, categorica de orden fijo para dimensiones ---
 COLOR_SENTIMIENTO = {"positivo": "#0ca30c", "neutral": "#898781", "negativo": "#d03b3b"}
@@ -79,14 +97,7 @@ def render_grafo(comentarios: list[str], etiqueta: str) -> None:
 
 
 def main() -> None:
-    if not RUTA_DATASET.exists():
-        st.title("💬 Voz del Cliente en Banca Digital")
-        st.warning(
-            "Todavia no hay datos procesados. Corre primero el pipeline:\n\n"
-            "```\npython scripts/run_pipeline.py\n```"
-        )
-        st.stop()
-
+    asegurar_datos_procesados()
     df = cargar_datos()
 
     st.title("💬 Voz del Cliente en Banca Digital")

@@ -154,6 +154,27 @@ streamlit run app/dashboard.py
 pytest tests/ -v   # opcional: correr la suite de tests
 ```
 
+## Despliegue en Streamlit Community Cloud
+
+El dashboard se auto-inicializa: si `data/processed/` no existe (por ejemplo, en un
+clon nuevo del repo en la nube), `app/dashboard.py` corre el pipeline con el dataset
+de muestra automáticamente en el primer arranque (`asegurar_datos_procesados()`), así
+que no hace falta ningún paso manual antes de desplegar.
+
+1. Sube el repo a GitHub (público, o privado si autorizas el acceso de Streamlit).
+2. Entra a [share.streamlit.io](https://share.streamlit.io) con tu cuenta de GitHub.
+3. "New app" → selecciona el repo, la rama (`main` una vez mergeado el PR, o la rama
+   de feature si quieres el link antes de mergear) y como **Main file path**:
+   `app/dashboard.py`.
+4. En "Advanced settings" puedes fijar la versión de Python (3.11) si el detector
+   automático no la infiere bien. No se necesitan variables de entorno ni secretos.
+5. Deploy. La primera carga tarda unos segundos extra (genera `data/processed/`);
+   las siguientes son instantáneas.
+
+El único archivo de dependencias que usa Streamlit Cloud es `requirements.txt`
+(liviano, sin `torch`). `requirements-optional.txt` (backend transformer) es solo
+para uso local y no se instala en el despliegue.
+
 ## Limitaciones y próximos pasos
 
 - El motor léxico prioriza transparencia sobre precisión de punta; en un caso real
