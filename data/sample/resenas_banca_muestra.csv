@@ -1,0 +1,321 @@
+id_resena,banco,canal,fecha,calificacion,comentario,tema_sintetico
+1,Interbank,Banca en Linea,2026-05-04,1,Llevo dias intentando entrar a la app y siempre marca error.,tecnologia
+2,Banorte,App Movil,2026-06-29,4,"Todo fue muy rapido, en minutos ya tenia mi tarjeta activada.",tiempos
+3,BBVA,Banca en Linea,2026-04-04,5,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+4,Interbank,Chat / Call Center,2025-09-16,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+5,Banorte,Banca en Linea,2026-02-22,1,"Pesima actualizacion, ahora la aplicacion es mas lenta que antes.",tecnologia
+6,Santander,Chat / Call Center,2026-05-26,5,"No cobran comision por transferencias, muy conveniente usar Santander.",costos
+7,BBVA,App Movil,2025-11-21,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+8,Banco de Chile,Chat / Call Center,2025-09-01,5,Me siento muy segura con la autenticacion de dos pasos de Banco de Chile.,seguridad
+9,Interbank,Banca en Linea,2026-06-04,1,La app de Interbank se cae constantemente y no puedo revisar mi saldo.,tecnologia
+10,Scotiabank,Banca en Linea,2026-01-09,2,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+11,Santander,Banca en Linea,2025-08-23,5,"El servicio al cliente de Santander superó mis expectativas, muy atentos.",atencion
+12,Scotiabank,Banca en Linea,2026-02-26,3,"La atencion fue normal, ni buena ni mala, resolvieron mi caso.",atencion
+13,BBVA,Chat / Call Center,2026-06-28,1,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+14,Nubank,App Movil,2025-08-13,3,La app de Nubank funciona bien pero podria mejorar el diseno.,tecnologia
+15,Banco de Chile,Banca en Linea,2026-03-10,4,Me siento muy segura con la autenticacion de dos pasos de Banco de Chile.,seguridad
+16,Banorte,Chat / Call Center,2025-12-22,2,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+17,Santander,Banca en Linea,2026-05-19,4,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+18,Santander,App Movil,2025-12-31,1,"Tengo miedo de usar la app de Santander, no confio en su seguridad.",seguridad
+19,BBVA,Banca en Linea,2026-05-17,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+20,Nubank,App Movil,2026-02-14,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+21,BCP,Banca en Linea,2026-05-21,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+22,Interbank,Banca en Linea,2026-01-04,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+23,Nubank,App Movil,2026-07-05,3,La aplicacion esta bien pero a veces tarda un poco en cargar.,tecnologia
+24,BBVA,App Movil,2025-09-27,1,"Me cobraron una comision que nadie me explico, pesimo servicio.",costos
+25,BCP,App Movil,2025-08-11,4,Me siento muy segura con la autenticacion de dos pasos de BCP.,seguridad
+26,Banorte,Banca en Linea,2025-10-11,1,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+27,Nubank,App Movil,2025-10-23,1,Los cargos ocultos de Nubank son un abuso total.,costos
+28,Nubank,App Movil,2025-09-16,4,El asesor de Nubank fue muy amable y resolvio mi duda al instante.,atencion
+29,Santander,App Movil,2025-08-25,5,El asesor de Santander fue muy amable y resolvio mi duda al instante.,atencion
+30,Santander,Chat / Call Center,2026-03-15,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+31,Scotiabank,App Movil,2025-11-14,1,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+32,Nubank,App Movil,2025-12-16,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+33,BBVA,App Movil,2026-01-22,1,La app de BBVA se cae constantemente y no puedo revisar mi saldo.,tecnologia
+34,BCP,Chat / Call Center,2026-04-12,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+35,Santander,App Movil,2025-08-15,3,"Cumple con lo basico, aunque le faltan algunas funciones utiles.",tecnologia
+36,BCP,App Movil,2025-11-08,1,"Pesima actualizacion, ahora la aplicacion es mas lenta que antes.",tecnologia
+37,BCP,App Movil,2026-07-13,5,Me siento muy segura con la autenticacion de dos pasos de BCP.,seguridad
+38,Banorte,Banca en Linea,2025-10-03,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+39,Banco de Chile,App Movil,2026-06-15,1,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+40,BBVA,App Movil,2025-09-18,1,Llevo dias intentando entrar a la app y siempre marca error.,tecnologia
+41,Santander,App Movil,2026-06-09,3,"La atencion fue normal, ni buena ni mala, resolvieron mi caso.",atencion
+42,Santander,App Movil,2026-03-10,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+43,Banorte,App Movil,2025-09-19,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+44,Nubank,App Movil,2026-03-01,3,Las comisiones de Nubank son similares a las de otros bancos.,costos
+45,Nubank,App Movil,2026-07-10,4,"Me gusta que Nubank no tiene cargos ocultos, todo es transparente.",costos
+46,Santander,App Movil,2026-03-27,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+47,Interbank,Banca en Linea,2026-02-19,5,"No cobran comision por transferencias, muy conveniente usar Interbank.",costos
+48,Banco de Chile,Chat / Call Center,2026-05-07,3,Las comisiones de Banco de Chile son similares a las de otros bancos.,costos
+49,BCP,App Movil,2026-02-20,5,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+50,Banco de Chile,Chat / Call Center,2025-11-06,5,"No cobran comision por transferencias, muy conveniente usar Banco de Chile.",costos
+51,Banorte,App Movil,2026-06-22,1,La app de Banorte se cae constantemente y no puedo revisar mi saldo.,tecnologia
+52,BCP,App Movil,2025-11-30,5,"El servicio al cliente de BCP superó mis expectativas, muy atentos.",atencion
+53,Santander,Banca en Linea,2025-07-26,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+54,Banorte,Chat / Call Center,2026-06-23,3,Las comisiones de Banorte son similares a las de otros bancos.,costos
+55,Interbank,Banca en Linea,2026-03-09,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+56,BCP,Banca en Linea,2026-04-22,4,"El tramite en BCP fue rapidisimo, no esperé nada.",tiempos
+57,Nubank,Banca en Linea,2025-08-06,1,"Pesima actualizacion, ahora la aplicacion es mas lenta que antes.",tecnologia
+58,Santander,App Movil,2026-06-25,1,"Me cobraron una comision que nadie me explico, pesimo servicio.",costos
+59,Banco de Chile,App Movil,2026-03-22,4,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+60,Banco de Chile,Chat / Call Center,2026-02-22,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+61,Nubank,Chat / Call Center,2026-05-16,1,"Tengo miedo de usar la app de Nubank, no confio en su seguridad.",seguridad
+62,Santander,Chat / Call Center,2025-12-04,5,"No cobran comision por transferencias, muy conveniente usar Santander.",costos
+63,Santander,Banca en Linea,2025-09-22,1,Los cargos ocultos de Santander son un abuso total.,costos
+64,Interbank,App Movil,2025-12-06,5,Me siento muy segura con la autenticacion de dos pasos de Interbank.,seguridad
+65,Nubank,Banca en Linea,2026-05-12,2,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+66,Banorte,Banca en Linea,2025-12-20,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+67,Banorte,Banca en Linea,2026-01-01,5,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+68,Banorte,Chat / Call Center,2026-07-14,2,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+69,Nubank,App Movil,2025-11-30,5,"Nunca he tenido problemas de seguridad con Nubank, confio plenamente.",seguridad
+70,BCP,Chat / Call Center,2026-06-01,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+71,Interbank,Banca en Linea,2026-03-21,3,Las comisiones de Interbank son similares a las de otros bancos.,costos
+72,Scotiabank,App Movil,2026-06-07,5,"Excelente experiencia con la aplicacion de Scotiabank, nunca habia sido tan simple.",tecnologia
+73,Scotiabank,Banca en Linea,2026-03-12,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+74,Banorte,Banca en Linea,2026-04-15,1,La app de Banorte se cae constantemente y no puedo revisar mi saldo.,tecnologia
+75,Interbank,Banca en Linea,2025-11-23,3,La aplicacion esta bien pero a veces tarda un poco en cargar.,tecnologia
+76,Nubank,Banca en Linea,2025-09-04,1,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+77,Scotiabank,App Movil,2025-11-13,1,"Tengo miedo de usar la app de Scotiabank, no confio en su seguridad.",seguridad
+78,Scotiabank,Chat / Call Center,2026-03-14,5,"El servicio al cliente de Scotiabank superó mis expectativas, muy atentos.",atencion
+79,Banco de Chile,App Movil,2026-02-01,3,Las comisiones de Banco de Chile son similares a las de otros bancos.,costos
+80,Banorte,Banca en Linea,2026-04-27,5,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+81,Nubank,App Movil,2025-11-18,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+82,BBVA,App Movil,2026-01-01,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+83,Banorte,Banca en Linea,2025-10-12,5,"Me gusta que Banorte no tiene cargos ocultos, todo es transparente.",costos
+84,Scotiabank,App Movil,2026-02-25,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+85,Banorte,Banca en Linea,2025-11-17,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+86,Banorte,Banca en Linea,2025-09-29,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+87,Scotiabank,Chat / Call Center,2026-06-19,4,Me siento muy segura con la autenticacion de dos pasos de Scotiabank.,seguridad
+88,Nubank,Chat / Call Center,2026-01-01,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+89,Santander,Banca en Linea,2026-07-05,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+90,Santander,Banca en Linea,2026-06-29,3,Las comisiones de Santander son similares a las de otros bancos.,costos
+91,BCP,App Movil,2026-05-11,4,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+92,Scotiabank,Chat / Call Center,2026-03-05,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+93,Santander,App Movil,2026-02-05,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+94,Banorte,App Movil,2026-04-04,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+95,Banco de Chile,App Movil,2025-09-10,2,El asesor de Banco de Chile fue muy grosero y no resolvio mi problema.,atencion
+96,Nubank,Banca en Linea,2025-12-07,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+97,Nubank,App Movil,2025-12-11,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+98,Scotiabank,App Movil,2026-04-27,5,Las tarifas de Scotiabank son las mas bajas que he encontrado.,costos
+99,Banco de Chile,App Movil,2025-10-12,5,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+100,Interbank,App Movil,2026-02-22,3,El costo del mantenimiento de cuenta esta en el promedio del mercado.,costos
+101,Banorte,App Movil,2026-06-30,5,"Nunca he tenido problemas de seguridad con Banorte, confio plenamente.",seguridad
+102,Interbank,Chat / Call Center,2026-03-04,1,"Muy mala atencion en la sucursal, el personal fue prepotente.",atencion
+103,Banco de Chile,App Movil,2026-07-09,5,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+104,Banorte,Banca en Linea,2025-10-03,1,"Pesima actualizacion, ahora la aplicacion es mas lenta que antes.",tecnologia
+105,BBVA,Banca en Linea,2026-02-14,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+106,Nubank,App Movil,2025-10-04,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+107,Nubank,Chat / Call Center,2025-11-24,5,"El tramite en Nubank fue rapidisimo, no esperé nada.",tiempos
+108,Interbank,Banca en Linea,2026-05-14,5,El asesor de Interbank fue muy amable y resolvio mi duda al instante.,atencion
+109,Interbank,Banca en Linea,2026-02-23,3,"La atencion fue normal, ni buena ni mala, resolvieron mi caso.",atencion
+110,Banco de Chile,Chat / Call Center,2026-04-06,1,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+111,BBVA,Banca en Linea,2025-10-14,5,"El servicio al cliente de BBVA superó mis expectativas, muy atentos.",atencion
+112,Banco de Chile,Banca en Linea,2026-05-11,5,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+113,BBVA,App Movil,2026-02-19,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+114,BBVA,App Movil,2025-11-12,3,Las comisiones de BBVA son similares a las de otros bancos.,costos
+115,Santander,Banca en Linea,2025-08-26,2,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+116,Santander,App Movil,2026-05-15,4,"El servicio al cliente de Santander superó mis expectativas, muy atentos.",atencion
+117,Interbank,App Movil,2026-01-01,2,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+118,Banorte,App Movil,2025-09-26,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+119,Interbank,App Movil,2025-08-10,5,"Excelente experiencia con la aplicacion de Interbank, nunca habia sido tan simple.",tecnologia
+120,BCP,App Movil,2025-12-17,4,El asesor de BCP fue muy amable y resolvio mi duda al instante.,atencion
+121,BBVA,Banca en Linea,2026-02-17,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+122,Interbank,App Movil,2025-08-28,5,Me siento muy segura con la autenticacion de dos pasos de Interbank.,seguridad
+123,Santander,Banca en Linea,2026-03-21,2,"Muy mala atencion en la sucursal, el personal fue prepotente.",atencion
+124,Santander,Chat / Call Center,2026-04-21,4,"No cobran comision por transferencias, muy conveniente usar Santander.",costos
+125,Scotiabank,Banca en Linea,2025-11-17,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+126,Scotiabank,App Movil,2026-06-03,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+127,Nubank,App Movil,2026-03-08,5,"Nunca he tenido problemas de seguridad con Nubank, confio plenamente.",seguridad
+128,BBVA,App Movil,2026-02-27,5,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+129,Scotiabank,App Movil,2026-04-13,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+130,Scotiabank,Chat / Call Center,2025-12-17,3,"El tramite tomo el tiempo esperado, sin sorpresas.",tiempos
+131,Nubank,App Movil,2025-07-24,5,"Excelente experiencia con la aplicacion de Nubank, nunca habia sido tan simple.",tecnologia
+132,BBVA,Chat / Call Center,2026-05-30,5,"Nunca he tenido problemas de seguridad con BBVA, confio plenamente.",seguridad
+133,BBVA,App Movil,2025-10-10,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+134,Scotiabank,Banca en Linea,2026-06-18,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+135,Scotiabank,App Movil,2025-11-08,5,"El servicio al cliente de Scotiabank superó mis expectativas, muy atentos.",atencion
+136,BCP,App Movil,2025-10-05,5,"Todo fue muy rapido, en minutos ya tenia mi tarjeta activada.",tiempos
+137,Santander,Banca en Linea,2026-05-15,1,"Pesima actualizacion, ahora la aplicacion es mas lenta que antes.",tecnologia
+138,Banco de Chile,Chat / Call Center,2025-07-18,2,"Tengo miedo de usar la app de Banco de Chile, no confio en su seguridad.",seguridad
+139,Interbank,Banca en Linea,2025-10-05,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+140,BCP,App Movil,2026-02-23,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+141,BBVA,App Movil,2026-02-12,5,"El tramite en BBVA fue rapidisimo, no esperé nada.",tiempos
+142,Scotiabank,Chat / Call Center,2025-11-09,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+143,Scotiabank,Banca en Linea,2026-04-09,5,"El tramite en Scotiabank fue rapidisimo, no esperé nada.",tiempos
+144,Banorte,Banca en Linea,2026-02-02,4,Me siento muy segura con la autenticacion de dos pasos de Banorte.,seguridad
+145,BCP,Banca en Linea,2026-06-26,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+146,Scotiabank,App Movil,2025-10-18,3,Las comisiones de Scotiabank son similares a las de otros bancos.,costos
+147,BCP,Chat / Call Center,2025-11-16,4,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+148,Santander,App Movil,2025-08-03,5,"Nunca he tenido problemas de seguridad con Santander, confio plenamente.",seguridad
+149,Scotiabank,App Movil,2026-06-26,5,Las tarifas de Scotiabank son las mas bajas que he encontrado.,costos
+150,Santander,Banca en Linea,2026-05-25,5,"No cobran comision por transferencias, muy conveniente usar Santander.",costos
+151,BCP,App Movil,2026-02-11,2,La app se congela cada vez que intento hacer una transferencia.,tecnologia
+152,Nubank,Banca en Linea,2025-12-06,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+153,BCP,App Movil,2026-04-16,4,"Nunca he tenido problemas de seguridad con BCP, confio plenamente.",seguridad
+154,Interbank,Banca en Linea,2025-09-19,1,"Tengo miedo de usar la app de Interbank, no confio en su seguridad.",seguridad
+155,Banco de Chile,App Movil,2026-07-10,5,"Me gusta que Banco de Chile no tiene cargos ocultos, todo es transparente.",costos
+156,Santander,App Movil,2026-01-19,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+157,Banco de Chile,Banca en Linea,2026-02-10,5,"Nunca he tenido problemas de seguridad con Banco de Chile, confio plenamente.",seguridad
+158,Interbank,Chat / Call Center,2025-09-25,1,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+159,Banorte,App Movil,2026-07-10,1,"Me cobraron una comision que nadie me explico, pesimo servicio.",costos
+160,Scotiabank,App Movil,2026-03-19,1,"Muy mala experiencia, la aplicacion de Scotiabank no carga nunca.",tecnologia
+161,Banco de Chile,Banca en Linea,2025-08-11,2,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+162,Banco de Chile,App Movil,2026-06-27,1,La app de Banco de Chile se cae constantemente y no puedo revisar mi saldo.,tecnologia
+163,Banco de Chile,Banca en Linea,2025-12-14,5,El asesor de Banco de Chile fue muy amable y resolvio mi duda al instante.,atencion
+164,Banco de Chile,App Movil,2026-03-05,4,"El tramite en Banco de Chile fue rapidisimo, no esperé nada.",tiempos
+165,Nubank,App Movil,2025-11-17,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+166,Nubank,App Movil,2025-12-24,4,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+167,Nubank,Chat / Call Center,2025-08-04,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+168,Interbank,App Movil,2026-07-02,1,"Me cobraron una comision que nadie me explico, pesimo servicio.",costos
+169,Interbank,Banca en Linea,2026-06-12,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+170,Banorte,App Movil,2026-05-04,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+171,Santander,App Movil,2026-03-16,1,Los cargos ocultos de Santander son un abuso total.,costos
+172,Banorte,App Movil,2026-04-26,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+173,Banorte,Banca en Linea,2026-06-28,1,"Tengo miedo de usar la app de Banorte, no confio en su seguridad.",seguridad
+174,Interbank,Banca en Linea,2026-05-25,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+175,Banorte,App Movil,2026-04-08,5,"No cobran comision por transferencias, muy conveniente usar Banorte.",costos
+176,Interbank,App Movil,2025-08-21,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+177,Interbank,Banca en Linea,2025-09-28,1,Llevo dias intentando entrar a la app y siempre marca error.,tecnologia
+178,Interbank,Banca en Linea,2026-01-27,4,"Todo fue muy rapido, en minutos ya tenia mi tarjeta activada.",tiempos
+179,Banco de Chile,App Movil,2026-05-09,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+180,BBVA,Chat / Call Center,2026-07-07,4,El asesor de BBVA fue muy amable y resolvio mi duda al instante.,atencion
+181,BBVA,App Movil,2026-03-01,1,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+182,Santander,App Movil,2026-06-12,5,"Nunca he tenido problemas de seguridad con Santander, confio plenamente.",seguridad
+183,Scotiabank,App Movil,2025-09-03,3,Las comisiones de Scotiabank son similares a las de otros bancos.,costos
+184,Scotiabank,App Movil,2026-06-29,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+185,Santander,App Movil,2025-07-15,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+186,BCP,Chat / Call Center,2026-05-11,4,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+187,Nubank,App Movil,2025-09-12,1,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+188,Banorte,App Movil,2025-07-20,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+189,Interbank,Banca en Linea,2025-11-25,1,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+190,Banorte,App Movil,2026-02-04,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+191,BCP,App Movil,2025-11-14,5,"Me gusta que BCP no tiene cargos ocultos, todo es transparente.",costos
+192,Banorte,Banca en Linea,2026-01-05,4,"La app de Banorte es muy rapida y facil de usar, hago todo en segundos.",tecnologia
+193,Nubank,App Movil,2026-05-13,2,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+194,BBVA,Chat / Call Center,2025-09-10,5,"Nunca he tenido problemas de seguridad con BBVA, confio plenamente.",seguridad
+195,Interbank,App Movil,2025-08-12,4,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+196,Nubank,App Movil,2026-02-22,4,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+197,BBVA,Banca en Linea,2025-08-12,5,"Nunca he tenido problemas de seguridad con BBVA, confio plenamente.",seguridad
+198,Banco de Chile,App Movil,2026-01-16,5,"El servicio al cliente de Banco de Chile superó mis expectativas, muy atentos.",atencion
+199,Santander,App Movil,2025-08-24,4,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+200,Banorte,Chat / Call Center,2025-11-24,5,"Todo fue muy rapido, en minutos ya tenia mi tarjeta activada.",tiempos
+201,Nubank,App Movil,2025-09-12,5,Las tarifas de Nubank son las mas bajas que he encontrado.,costos
+202,BBVA,Chat / Call Center,2026-06-03,2,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+203,Scotiabank,Banca en Linea,2026-02-25,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+204,Banorte,Banca en Linea,2026-02-19,1,Llevo dias intentando entrar a la app y siempre marca error.,tecnologia
+205,Banco de Chile,App Movil,2026-03-24,1,"Tengo miedo de usar la app de Banco de Chile, no confio en su seguridad.",seguridad
+206,Interbank,Banca en Linea,2026-03-28,1,La app de Interbank se cae constantemente y no puedo revisar mi saldo.,tecnologia
+207,Santander,Banca en Linea,2025-11-02,1,Los cargos ocultos de Santander son un abuso total.,costos
+208,Interbank,App Movil,2026-06-08,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+209,BBVA,Chat / Call Center,2026-06-05,1,La app se congela cada vez que intento hacer una transferencia.,tecnologia
+210,Banorte,App Movil,2026-05-17,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+211,Scotiabank,App Movil,2026-01-10,5,"No cobran comision por transferencias, muy conveniente usar Scotiabank.",costos
+212,Banorte,App Movil,2025-10-19,3,La app de Banorte funciona bien pero podria mejorar el diseno.,tecnologia
+213,Nubank,Banca en Linea,2026-01-25,4,Las tarifas de Nubank son las mas bajas que he encontrado.,costos
+214,Interbank,Banca en Linea,2026-01-16,5,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+215,Santander,Banca en Linea,2026-03-05,1,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+216,BCP,App Movil,2025-11-04,5,El asesor de BCP fue muy amable y resolvio mi duda al instante.,atencion
+217,Nubank,Banca en Linea,2026-02-03,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+218,Banco de Chile,App Movil,2025-09-15,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+219,Scotiabank,App Movil,2026-06-25,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+220,Santander,App Movil,2025-09-13,5,"No cobran comision por transferencias, muy conveniente usar Santander.",costos
+221,BBVA,Banca en Linea,2025-09-25,5,"Aprobaron mi solicitud en menos de un dia, excelente tiempo de respuesta.",tiempos
+222,BCP,App Movil,2025-11-26,4,"El tramite en BCP fue rapidisimo, no esperé nada.",tiempos
+223,Santander,Banca en Linea,2025-08-18,2,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+224,BCP,Chat / Call Center,2026-01-05,5,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+225,BBVA,Chat / Call Center,2025-08-17,5,Las tarifas de BBVA son las mas bajas que he encontrado.,costos
+226,Banorte,Banca en Linea,2026-03-07,5,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+227,Nubank,Banca en Linea,2025-09-19,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+228,Banorte,Banca en Linea,2025-09-13,4,"Me gusta que Banorte no tiene cargos ocultos, todo es transparente.",costos
+229,Banorte,Banca en Linea,2026-01-27,2,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+230,Banorte,App Movil,2026-01-10,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+231,Nubank,Banca en Linea,2026-04-07,5,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+232,Banco de Chile,App Movil,2025-10-28,1,El asesor de Banco de Chile fue muy grosero y no resolvio mi problema.,atencion
+233,Nubank,App Movil,2026-05-08,2,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+234,BCP,App Movil,2025-12-02,5,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+235,Banco de Chile,App Movil,2026-03-17,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+236,Nubank,App Movil,2025-09-25,5,Me siento muy segura con la autenticacion de dos pasos de Nubank.,seguridad
+237,Banorte,App Movil,2026-04-03,3,El costo del mantenimiento de cuenta esta en el promedio del mercado.,costos
+238,Scotiabank,App Movil,2025-10-04,5,"No cobran comision por transferencias, muy conveniente usar Scotiabank.",costos
+239,Banco de Chile,Chat / Call Center,2026-04-23,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+240,Santander,Chat / Call Center,2025-11-26,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+241,Banorte,Banca en Linea,2026-01-04,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+242,Interbank,App Movil,2026-02-01,4,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+243,BCP,App Movil,2026-02-18,1,"Me cobraron una comision que nadie me explico, pesimo servicio.",costos
+244,Scotiabank,App Movil,2026-07-12,2,"Muy mala atencion en la sucursal, el personal fue prepotente.",atencion
+245,Banorte,Banca en Linea,2026-02-17,4,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+246,Banorte,App Movil,2025-08-30,5,"Excelente experiencia con la aplicacion de Banorte, nunca habia sido tan simple.",tecnologia
+247,BBVA,App Movil,2025-10-24,5,"Nunca he tenido problemas de seguridad con BBVA, confio plenamente.",seguridad
+248,Banorte,Chat / Call Center,2025-09-03,4,"El servicio al cliente de Banorte superó mis expectativas, muy atentos.",atencion
+249,Santander,App Movil,2026-01-11,5,Me siento muy segura con la autenticacion de dos pasos de Santander.,seguridad
+250,BBVA,App Movil,2025-11-16,1,"Demasiada demora para resolver un reclamo simple, muy mala experiencia.",tiempos
+251,BBVA,Chat / Call Center,2026-06-10,1,Los cargos ocultos de BBVA son un abuso total.,costos
+252,Nubank,Chat / Call Center,2026-06-22,4,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+253,Scotiabank,App Movil,2026-05-06,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+254,Banco de Chile,Banca en Linea,2026-06-22,1,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+255,Banorte,Chat / Call Center,2025-11-14,2,Los cargos ocultos de Banorte son un abuso total.,costos
+256,Nubank,Chat / Call Center,2025-08-13,4,"El servicio al cliente de Nubank superó mis expectativas, muy atentos.",atencion
+257,Banorte,App Movil,2025-12-01,5,"Me gusta que Banorte no tiene cargos ocultos, todo es transparente.",costos
+258,Scotiabank,Chat / Call Center,2025-10-22,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+259,Banorte,App Movil,2026-04-13,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+260,Nubank,Chat / Call Center,2026-02-13,5,"La app de Nubank es muy rapida y facil de usar, hago todo en segundos.",tecnologia
+261,Scotiabank,App Movil,2025-11-28,3,"El tramite tomo el tiempo esperado, sin sorpresas.",tiempos
+262,Banorte,App Movil,2025-08-21,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+263,BCP,App Movil,2026-05-02,4,"La app tiene buena seguridad, siempre piden verificacion biometrica.",seguridad
+264,BCP,Banca en Linea,2026-03-16,1,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+265,BBVA,Banca en Linea,2026-04-27,5,"Nunca he tenido problemas de seguridad con BBVA, confio plenamente.",seguridad
+266,Scotiabank,Banca en Linea,2025-09-24,3,El costo del mantenimiento de cuenta esta en el promedio del mercado.,costos
+267,Banco de Chile,App Movil,2026-05-17,3,La atencion en sucursal fue en un tiempo razonable.,tiempos
+268,Banorte,Chat / Call Center,2026-05-15,2,"Tengo miedo de usar la app de Banorte, no confio en su seguridad.",seguridad
+269,Banco de Chile,Banca en Linea,2025-11-05,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+270,BCP,App Movil,2025-11-29,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+271,Nubank,App Movil,2026-06-11,2,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+272,BCP,Banca en Linea,2025-10-27,3,Las comisiones de BCP son similares a las de otros bancos.,costos
+273,Interbank,Chat / Call Center,2026-07-01,5,"Excelente atencion por chat, me ayudaron rapido y con mucha paciencia.",atencion
+274,BCP,App Movil,2026-05-31,2,Los cargos ocultos de BCP son un abuso total.,costos
+275,Banorte,App Movil,2025-09-23,5,"Nunca he tenido problemas de seguridad con Banorte, confio plenamente.",seguridad
+276,Santander,Banca en Linea,2025-11-18,5,Las tarifas de Santander son las mas bajas que he encontrado.,costos
+277,BCP,App Movil,2025-10-30,3,"La atencion fue normal, ni buena ni mala, resolvieron mi caso.",atencion
+278,Banco de Chile,Chat / Call Center,2026-04-23,1,Llevo mas de una hora esperando que me atiendan en el chat.,tiempos
+279,Banco de Chile,Banca en Linea,2026-03-08,1,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+280,BCP,App Movil,2026-02-09,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+281,BCP,App Movil,2025-09-29,3,"La atencion fue normal, ni buena ni mala, resolvieron mi caso.",atencion
+282,BBVA,Chat / Call Center,2025-09-22,2,La app de BBVA se cae constantemente y no puedo revisar mi saldo.,tecnologia
+283,BBVA,App Movil,2025-08-27,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+284,Interbank,Chat / Call Center,2025-12-19,5,"Me gusta que Interbank no tiene cargos ocultos, todo es transparente.",costos
+285,Scotiabank,App Movil,2025-11-09,3,La app de Scotiabank funciona bien pero podria mejorar el diseno.,tecnologia
+286,Nubank,Banca en Linea,2026-02-01,5,"Todo fue muy rapido, en minutos ya tenia mi tarjeta activada.",tiempos
+287,BCP,App Movil,2025-10-24,1,Los cargos ocultos de BCP son un abuso total.,costos
+288,Santander,Banca en Linea,2025-11-26,5,"Muy buena atencion en la sucursal, todo el personal fue amable.",atencion
+289,Banorte,Banca en Linea,2025-12-12,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+290,Nubank,App Movil,2026-04-24,1,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+291,Banco de Chile,App Movil,2026-07-03,1,Me bloquearon la cuenta sin explicacion y fue una pesadilla recuperarla.,seguridad
+292,Interbank,Chat / Call Center,2025-09-19,1,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+293,Scotiabank,App Movil,2025-10-13,5,"Me gusta que Scotiabank no tiene cargos ocultos, todo es transparente.",costos
+294,Banco de Chile,App Movil,2026-01-08,2,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+295,Interbank,Chat / Call Center,2025-10-04,5,Me siento muy segura con la autenticacion de dos pasos de Interbank.,seguridad
+296,Banco de Chile,App Movil,2025-07-31,5,"El tramite en Banco de Chile fue rapidisimo, no esperé nada.",tiempos
+297,Nubank,Chat / Call Center,2025-10-02,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+298,BBVA,Banca en Linea,2026-06-25,1,"Muy mala atencion en la sucursal, el personal fue prepotente.",atencion
+299,Scotiabank,App Movil,2025-09-07,1,"Tengo miedo de usar la app de Scotiabank, no confio en su seguridad.",seguridad
+300,BCP,Banca en Linea,2025-09-02,5,"El tramite en BCP fue rapidisimo, no esperé nada.",tiempos
+301,Scotiabank,Chat / Call Center,2025-09-29,2,"El tramite de mi tarjeta demoro casi un mes, una demora inaceptable.",tiempos
+302,Nubank,App Movil,2025-12-13,3,"Cumple con lo basico, aunque le faltan algunas funciones utiles.",tecnologia
+303,Scotiabank,App Movil,2025-08-13,5,"Muy buena la app movil, puedo hacer transferencias sin ningun problema.",tecnologia
+304,Scotiabank,Banca en Linea,2025-10-19,1,"Muy mala experiencia, la aplicacion de Scotiabank no carga nunca.",tecnologia
+305,Interbank,Banca en Linea,2025-09-24,1,Sufri un intento de fraude y el banco tardo dias en responder.,seguridad
+306,Nubank,App Movil,2026-04-28,5,"La actualizacion de la app quedo genial, ahora todo carga mas rapido.",tecnologia
+307,Scotiabank,Banca en Linea,2026-06-13,2,"Tengo miedo de usar la app de Scotiabank, no confio en su seguridad.",seguridad
+308,Scotiabank,Chat / Call Center,2026-01-03,5,"El servicio al cliente de Scotiabank superó mis expectativas, muy atentos.",atencion
+309,Nubank,Banca en Linea,2026-01-14,2,"Tengo miedo de usar la app de Nubank, no confio en su seguridad.",seguridad
+310,Scotiabank,Chat / Call Center,2026-03-10,1,"Subieron la comision de mantenimiento sin avisarme, muy molesto.",costos
+311,Banco de Chile,Banca en Linea,2026-03-30,2,Me tuvieron horas en espera y al final no solucionaron nada.,atencion
+312,Nubank,Chat / Call Center,2026-02-24,2,Los cargos ocultos de Nubank son un abuso total.,costos
+313,Banorte,Chat / Call Center,2026-05-01,5,"El tramite en Banorte fue rapidisimo, no esperé nada.",tiempos
+314,Scotiabank,Banca en Linea,2026-03-05,5,"Me encanta el nuevo diseno de la app, es intuitivo y no se traba.",tecnologia
+315,Banco de Chile,App Movil,2026-05-20,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+316,BBVA,Banca en Linea,2025-10-16,2,"Pesimo servicio al cliente, nadie responde en el chat.",atencion
+317,Banorte,App Movil,2025-11-15,1,La app de Banorte se cae constantemente y no puedo revisar mi saldo.,tecnologia
+318,BCP,App Movil,2025-08-14,1,El asesor de BCP fue muy grosero y no resolvio mi problema.,atencion
+319,Nubank,App Movil,2025-08-18,3,El asesor fue correcto pero se demoro un poco en responder.,atencion
+320,Interbank,Banca en Linea,2026-06-25,2,"Muy mala experiencia, la aplicacion de Interbank no carga nunca.",tecnologia

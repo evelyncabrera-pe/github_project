@@ -1,0 +1,23 @@
+# Configuracion del pipeline. Ajusta esto en lugar de tocar el codigo.
+
+# Fuente de datos por defecto al correr `python scripts/run_pipeline.py` sin argumentos.
+# Opciones: "muestra" (dataset sintetico bundleado, no requiere internet) | "play_store" (scraping real)
+fuente_por_defecto: muestra
+
+# Backend de sentimiento: "lexicon" (liviano, por defecto) | "transformer" (pysentimiento, requiere requirements-optional.txt)
+backend_sentimiento: lexicon
+
+# Apps de banca digital a extraer si fuente_por_defecto == play_store (o con --fuente play_store)
+# Los app_id son los identificadores reales de Google Play Store.
+apps_play_store:
+  BBVA Mexico: com.bbva.bbvabancomer
+  Nubank: com.nu.production
+  Banorte: mx.com.ixe.ixemobile
+  Santander Mexico: com.santander.mx
+
+idioma_resenas: es
+pais_resenas: mx
+max_resenas_por_app: 200
+
+# Escala de la columna 'calificacion' del dataset elegido (5 = estrellas 1-5, 10 = NPS 0-10)
+escala_calificacion: 5
