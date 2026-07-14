@@ -1,0 +1,6 @@
+# Dependencias opcionales para el backend de sentimiento basado en transformers
+# (mayor precisión, pero pesado: requiere descargar un modelo BERT en español).
+# Instalar solo si se ejecutará el pipeline con --sentiment-backend transformer
+# Ver README.md, seccion "Backends de sentimiento".
+pysentimiento>=0.7.0
+torch>=2.0

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Artefactos generados por el pipeline (se regeneran con scripts/run_pipeline.py)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+.streamlit/secrets.toml
+.DS_Store
+
+# Carpeta que pyvis genera junto al HTML al escribir assets locales
+/lib/
